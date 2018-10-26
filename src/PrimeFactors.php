@@ -14,12 +14,9 @@ class PrimeFactors
     {
         $primeFactors = [];
 
-        for ($canditate = 2; $canditate <= $number; $canditate++) {
-            while ($number % $canditate === 0) {
+        for ($canditate = 2; $number > 1; $canditate++)
+            for (; $number % $canditate === 0; $number /= $canditate)
                 $primeFactors[] = $canditate;
-                $number /= $canditate;
-            }
-        }
 
         return $primeFactors;
     }

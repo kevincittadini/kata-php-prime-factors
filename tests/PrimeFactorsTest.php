@@ -45,6 +45,14 @@ class PrimeFactorsTest extends TestCase
      */
     public function case5()
     {
+        $this->assertEquals([3, 3], PrimeFactors::generate(9));
+    }
+
+    /**
+     * @test
+     */
+    public function case6()
+    {
         $this->assertEquals([2, 2, 3, 3, 5], PrimeFactors::generate(180));
     }
 }
